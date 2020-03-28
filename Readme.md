@@ -61,7 +61,7 @@ echo "$CERTBOT_VALIDATION" >> $CHALLENGE_PATH
 ```
 
 ## Certbot
-You can run `certbot` manually or add create a cronjob.
+You can run `certbot` manually or create a cronjob.
 ```bash
 certbot-auto certonly -d somedomain.com -d '*.somedomain.com'  --server https://acme-v02.api.letsencrypt.org/directory --manual --agree-tos --no-eff-email --manual-public-ip-logging-ok --preferred-challenges dns-01 --manual-auth-hook  <path_to_autentication.sh> -m info@somedomain.com -q
 ```
